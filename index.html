@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krokodillespill XD</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div id="container">
         <div id="pointDiv">Poeng: 0</div>
         <div id="number1">6</div>
         <input type="text" id="inputid" oninput="userInput = this.value">
@@ -15,59 +16,6 @@
         <button onclick ="checkAnswer()">Submit</button>
     </div>
 
-    <script>
-        let firstNum = getRandomNumber();
-        let secondNum = getRandomNumber();
-        let userInput;
-        let points = 0;
-
-        function getRandomNumber() {
-            return Math.round(Math.random() * 10);
-        }
-
-        function reset() {
-            firstNum = getRandomNumber();
-            secondNum = getRandomNumber();
-            document.getElementById("number1").innerHTML = firstNum;
-            document.getElementById("number2").innerHTML = secondNum;
-        }
-
-        function correctAnswer() {
-            points++;
-            document.getElementById("pointDiv").innerHTML = `Poeng: ${points}`;
-            window.alert("Riktig");
-            reset();
-        }
-
-        function wrongAnswer() {
-            window.alert("Feil");
-            reset();
-        }
-
-        function checkAnswer() {
-            if (userInput == ">") {
-                if (firstNum > secondNum) {
-                    correctAnswer();
-                } else {
-                    wrongAnswer();
-                }
-            } else if (userInput == "<") {
-                if (firstNum < secondNum) {
-                    correctAnswer();
-                } else {
-                    wrongAnswer();
-                }
-            } else if (userInput == "=") {
-                if (firstNum == secondNum) {
-                    points++;
-                    correctAnswer();
-                } else {
-                    wrongAnswer();
-                }
-            } else {
-                window.alert("Ugjyldig input")
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
