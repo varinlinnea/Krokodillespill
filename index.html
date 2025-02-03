@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         <div id="pointDiv">Poeng: 0</div>
+        <img id="crocodile" src="crocodile.jpg" alt="">
         <div id="number1">6</div>
-        <input type="text" id="inputid" oninput="userInput = this.value">
+        <input type="text" class="inputbox" id="inputid" oninput="userInput = this.value">
         <div id="number2">7</div>
-        <button onclick ="reset()">Reset</button>
-        <button onclick ="checkAnswer()">Submit</button>
+        <div class="buttons">
+            <button onclick ="reset()">Reset</button>
+            <button onclick ="checkAnswer()">Submit</button>
+        </div>
+        
     </div>
 
     <script src="script.js"></script>
